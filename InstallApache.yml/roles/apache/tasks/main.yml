@@ -1,0 +1,17 @@
+- name: install httpd
+  yum:
+    name: httpd
+    state: installed
+- name: install firwall
+  yum:
+   name: firewalld
+   state: installed
+- name: start and enable httpd
+  systemd:
+    name: httpd
+    state: started
+    enabled: yes
+- name: copy index.html file to the managed host
+  copy:
+    src: "{{ html_page_src }}"
+    dest: "{{ html_page_dest }}"
