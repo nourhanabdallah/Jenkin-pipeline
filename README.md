@@ -22,7 +22,7 @@ This Jenkins pipeline automates the process of cloning repositories,executing a 
 ## 3. Cloning DockerFile from Gogs , build it and tar on VM3 by ssh command : 
                      `sshCommand remote: remote, command: "docker build -t ${DOCKER_IMAGE_NAME} BuildDockerImage"`
                     `sshCommand remote: remote, command: "docker save ${DOCKER_IMAGE_NAME} > ${DOCKER_TAR_PATH}"`
-  Note: all variable used are declared on `environment { }` as aglobal
+ [!Note]: all variable used are declared on `environment { }` as aglobal
 
                         stg-Result 
  ![image](https://github.com/nourhanabdallah/Nourhan-Abdallah/assets/125203973/00c01a2e-9a16-4bc6-b7ab-45b6b4223472)
@@ -48,6 +48,58 @@ This Jenkins pipeline automates the process of cloning repositories,executing a 
    ## 5. finally i clean workspace to avoid errors incase rebuild pipeline
 
    ![image](https://github.com/nourhanabdallah/Nourhan-Abdallah/assets/125203973/475f56ff-8edf-44f1-adac-a56ec1c647c2)
+
+
+# [!Webhook]
+# to make it allowed to clone repos from Gogs server using webhook and i use local vms with private ip so : i used Ngrok tool (support with temp public ip ) 
+- you can access my jenkins through : https://9f66-154-178-162-59.ngrok-free.app
+- in gogs side i used url with job name : https://9f66-154-178-162-59.ngrok-free.app/gogs-webhook/?job=project
+                  ![image](https://github.com/nourhanabdallah/Nourhan-Abdallah/assets/125203973/b6f914d1-c935-4559-99d2-571731c36565)
+
+
+
+______________________________________________________________________________________________________________________________________________________
+
+# apache-ansible-role
+### overview
+
+
+Implementing an ansible role for installing Apache on CentOS 9
+
+  ![image](https://github.com/nourhanabdallah/Nourhan-Abdallah/assets/125203973/282f9265-72cc-4036-9f17-c0c92caef808)
+
+
+  ## Prequisites
+
+  - install ansible plugin on jenkins 
+  - Set Passwordless authentication between master and hosts ssh-keygen , ssh-copy-id host_name@IP_address
+  -  On VM3 : 
+in `/etc/sudoers` add `host_name ALL=(ALL) NOPASSWD: ALL`
+
+## configure apache role 
+![image](https://github.com/nourhanabdallah/Nourhan-Abdallah/assets/125203973/5b75cdcf-77cc-4684-875c-908d30c749f1)
+
+
+## playbook.yml file
+![image](https://github.com/nourhanabdallah/Nourhan-Abdallah/assets/125203973/d4969307-3a67-4842-b5ef-34e683414ded)
+
+
+# Validation 
+
+![image](https://github.com/nourhanabdallah/Nourhan-Abdallah/assets/125203973/43ebfc80-6f81-4213-ad9e-38549fd82c93)
+
+
+
+
+
+
+  
+
+
+
+
+
+   
 
 
 
