@@ -29,6 +29,9 @@ This Jenkins pipeline automates the process of cloning repositories,executing a 
 
  ![image](https://github.com/nourhanabdallah/Nourhan-Abdallah/assets/125203973/07d5a97e-eb76-4dc3-a111-f07a09e75113)
 
+ ![image](https://github.com/nourhanabdallah/Nourhan-Abdallah/assets/125203973/e01d6a5e-a2ef-45ac-b660-7470ee7aca24)
+
+
 
 
 
