@@ -59,6 +59,10 @@ This Jenkins pipeline automates the process of cloning repositories,executing a 
 - in gogs side i used url with job name : https://9f66-154-178-162-59.ngrok-free.app/gogs-webhook/?job=project
                   ![image](https://github.com/nourhanabdallah/Nourhan-Abdallah/assets/125203973/b6f914d1-c935-4559-99d2-571731c36565)
 
+  
+- in jenkins side
+  ![image](https://github.com/nourhanabdallah/Nourhan-Abdallah/assets/125203973/34d7cc5f-9a35-4705-8f29-ebb5bb591e33)
+
 
 
 ______________________________________________________________________________________________________________________________________________________
